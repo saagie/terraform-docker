@@ -25,8 +25,3 @@ RUN apk --update add git bash
 # Install Helm plugins
 RUN helm init --client-only
 RUN helm plugin install https://github.com/nouney/helm-gcs
-
-
-RUN mkdir -p ~/.terraform.d/plugins/ \
-    && curl -L https://github.com/lawrencegripper/terraform-provider-kubernetes-yaml/releases/download/v0.1.45/terraform-provider-k8sraw-linux-386 -o ~/.terraform.d/plugins/terraform-provider-k8sraw \
-    && chmod +x ~/.terraform.d/plugins/terraform-provider-k8sraw

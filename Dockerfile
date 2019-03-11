@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:0.11.11
+FROM hashicorp/terraform:0.11.12
 
 ENV KUBE_LATEST_VERSION="v1.13.3"
 

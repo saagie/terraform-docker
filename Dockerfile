@@ -21,7 +21,9 @@ RUN curl -o /tmp/$FILENAME ${HELM_URL} \
    && rm -rf /tmp
 
 RUN apk --update add git bash
-
 # Install Helm plugins
 RUN helm init --client-only
 RUN helm plugin install https://github.com/nouney/helm-gcs
+
+RUN apk add aws-cli --repository http://dl-3.alpinelinux.org/alpine/edge/testing/
+RUN apk upgrade python3 --repository http://dl-3.alpinelinux.org/alpine/edge/main/

@@ -1,6 +1,8 @@
-FROM hashicorp/terraform:0.11.12
+FROM hashicorp/terraform:0.12.3
 
 ENV KUBE_LATEST_VERSION="v1.13.3"
+
+RUN apk --update add curl
 
 RUN curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBE_LATEST_VERSION}/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
  && chmod +x /usr/local/bin/kubectl

@@ -1,6 +1,6 @@
 FROM hashicorp/terraform:0.12.5
 
-ENV KUBE_LATEST_VERSION="v1.13.3"
+ENV KUBE_LATEST_VERSION="v1.15.1"
 
 RUN apk --update add curl
 

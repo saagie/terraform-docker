@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:0.12.3
+FROM hashicorp/terraform:0.12.5
 
 ENV KUBE_LATEST_VERSION="v1.13.3"
 
@@ -11,7 +11,7 @@ RUN curl -L https://amazon-eks.s3-us-west-2.amazonaws.com/1.11.5/2018-12-06/bin/
  && chmod +x /usr/local/bin/aws-iam-authenticator
 
 # Install Helm
-ENV VERSION v2.11.0
+ENV VERSION v2.14.2
 ENV FILENAME helm-${VERSION}-linux-amd64.tar.gz
 ENV HELM_URL https://storage.googleapis.com/kubernetes-helm/${FILENAME}
 

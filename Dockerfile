@@ -3,7 +3,7 @@ FROM centos:7
 RUN yum install curl unzip which python3-pip groff -y \
     && pip3 install awscli
 
-ENV TERRAFORM_VERSION="0.12.9"
+ENV TERRAFORM_VERSION="0.12.19"
 
 RUN curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o terraform.zip \
  && unzip terraform.zip -d /usr/local/bin \

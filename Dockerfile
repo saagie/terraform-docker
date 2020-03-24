@@ -24,6 +24,15 @@ ENV HELM_URL https://storage.googleapis.com/kubernetes-helm/${FILENAME}
 
 RUN echo $HELM_URL
 
+# Install gcloud
+RUN curl https://sdk.cloud.google.com > /tmp/install.sh \
+ && bash /tmp/install.sh --disable-prompts --install-dir=/opt \
+ && echo 'PATH=$PATH:/opt/google-cloud-sdk/bin' > /etc/profile.d/gcloud.sh 
+
 RUN curl -o /tmp/$FILENAME ${HELM_URL} \
    && tar -zxvf /tmp/${FILENAME} -C /tmp \
    && mv /tmp/linux-amd64/helm /bin/helm
+
+# Purge tmp directory
+RUN rm -fr /tmp/*
+

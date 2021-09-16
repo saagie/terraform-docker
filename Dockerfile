@@ -20,7 +20,7 @@ RUN curl -L https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/
  && chmod +x /usr/local/bin/aws-iam-authenticator
 
 # Install Helm
-ENV VERSION v3.5.3
+ENV VERSION v3.7.0
 ENV FILENAME helm-${VERSION}-linux-amd64.tar.gz
 ENV HELM_URL https://get.helm.sh/${FILENAME}
 

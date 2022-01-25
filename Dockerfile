@@ -11,7 +11,7 @@ RUN curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform
  && unzip terraform.zip -d /usr/local/bin \
  && rm terraform.zip
 
-ENV KUBE_VERSION="v1.20.5"
+ENV KUBE_VERSION="v1.21.8"
 
 RUN curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBE_VERSION}/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
  && chmod +x /usr/local/bin/kubectl

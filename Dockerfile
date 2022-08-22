@@ -2,8 +2,8 @@ FROM quay.io/centos/centos:stream8
 
 ADD files/google-cloud-sdk.repo /etc/yum.repos.d/google-cloud-sdk.repo
 
-RUN dnf install git curl unzip which python3-pip groff-base google-cloud-sdk -y \
-    && pip3 install awscli
+RUN dnf install git-2.31.1 curl-7.61.1 unzip-6.0 which-2.21 python3-pip-9.0.3 groff-base-1.22.3 google-cloud-sdk-369.0.0 -y \
+    && pip3 install awscli==1.22.42
 
 ENV TERRAFORM_VERSION="1.0.5"
 

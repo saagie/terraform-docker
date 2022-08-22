@@ -9,8 +9,9 @@
 | [`unzip`](http://www.info-zip.org/UnZip.html) | `6.0` |
 | [`groff-base`](http://www.gnu.org/software/groff/) | `1.22.3` |
 | [`curl`](https://curl.se/) | `7.61.1` |
-| [`git`](https://git-scm.com/) | `2.31.1` |
 | [`python3-pip`](http://www.pip-installer.org) | `9.0.3` |
+| [`jq`](http://stedolan.github.io/jq/) | `1.6` |
+| [`git`](https://git-scm.com/) | `2.31.1` |
 | [`google-cloud-sdk`](https://cloud.google.com/sdk/gcloud) | `398.0.0` |
 | [`awscli`](https://aws.amazon.com/cli/) | `1.24.10` |
 | [`terraform`](https://www.terraform.io/) | `1.0.5` |

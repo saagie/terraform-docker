@@ -8,9 +8,11 @@ RUN dnf install -y groff-base-1.22.3
 
 RUN dnf install -y curl-7.61.1
 
-RUN dnf install -y git-2.31.1
-
 RUN dnf install -y python3-pip-9.0.3
+
+RUN dnf install -y jq-1.6
+
+RUN dnf install -y git-2.31.1
 
 ADD files/google-cloud-sdk.repo /etc/yum.repos.d/google-cloud-sdk.repo
 RUN dnf install -y google-cloud-sdk-398.0.0

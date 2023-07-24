@@ -19,20 +19,20 @@ RUN dnf install -y google-cloud-sdk-434.0.0
 
 RUN pip3 install awscli==1.27.152
 
-ENV TERRAFORM_VERSION="1.5.0"
+ENV TERRAFORM_VERSION="1.5.3"
 
 RUN true \
  && curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o terraform.zip \
  && unzip terraform.zip -d /usr/local/bin \
  && rm terraform.zip
 
-ENV KUBE_VERSION="v1.27.2"
+ENV KUBE_VERSION="v1.27.3"
 
 RUN true \
  && curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBE_VERSION}/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
  && chmod +x /usr/local/bin/kubectl
 
-ENV HELM_VERSION v3.12.0
+ENV HELM_VERSION v3.12.2
 
 RUN true  \
  && FILENAME=helm-${HELM_VERSION}-linux-amd64.tar.gz \

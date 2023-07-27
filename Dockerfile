@@ -15,7 +15,7 @@ RUN dnf install -y jq-1.6
 RUN dnf install -y git-2.39.3
 
 ADD files/google-cloud-sdk.repo /etc/yum.repos.d/google-cloud-sdk.repo
-RUN dnf install -y google-cloud-sdk-434.0.0
+RUN dnf install -y google-cloud-sdk-440.0.0 google-cloud-sdk-gke-gcloud-auth-plugin-440.0.0
 
 RUN pip3 install awscli==1.27.152
 

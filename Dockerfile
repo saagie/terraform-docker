@@ -19,7 +19,7 @@ RUN dnf install -y google-cloud-sdk-440.0.0 google-cloud-sdk-gke-gcloud-auth-plu
 
 RUN pip3 install awscli==1.27.152
 
-ENV TERRAFORM_VERSION="1.5.3"
+ENV TERRAFORM_VERSION="1.7.2"
 
 RUN true \
  && curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o terraform.zip \
